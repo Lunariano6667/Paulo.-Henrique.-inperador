@@ -1,5 +1,5 @@
 const numerosenha = document.querySelector(`.parametro-senha__texto`);
-let tamanhoSenha = 12;
+let tamanhoSenha = 5;
 numerosenha.textContent = tamanhoSenha;
 
 const botoes = document.querySelectorAll(`.parametro-senha__botao`);
@@ -13,6 +13,7 @@ function diminuitamanho(){
 tamanhoSenha--;
     }
 numerosenha.textContent = tamanhoSenha;
+geraSenha();
 }
 function aumentaTamanho(){
     if (tamanhoSenha < 20){
@@ -20,6 +21,23 @@ function aumentaTamanho(){
         tamanhoSenha++;
     }
     numerosenha.textContent = tamanhoSenha;
+    geraSenha();
 }
 
-console.log(botoes);
+const campoSenha = document.querySelector(`#campo-senha`)
+
+const letrasminusculas = `ABCDEFGHIJKLMNOPQRSTUVXYWZ`;
+geraSenha();
+
+function geraSenha() {
+let senha = ``;
+    for (lit i = 0; i < tamanhoSenha;i++){
+        let numeroAleatorio = Math.random()*letrasMaiusculas.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + letrasminusculas[numeroAleatorio];
+    }
+    campoSenha.value = senha;
+ }
+
+
+
