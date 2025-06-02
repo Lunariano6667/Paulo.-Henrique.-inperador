@@ -62,6 +62,7 @@ let senha = ``;
  }
 
 function classificaSenha (){
+    forcaSenha.classList.remove(`fraca`);
     forcaSenha.classList.add(`forte`);
 }
 
