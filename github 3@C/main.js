@@ -61,14 +61,16 @@ let senha = ``;
 
  }
 
-function classificaSenha (){
+function classificaSenha (tamanhoAlfabeto){
+    let entropia = tamanhosenha * Math.log2(tamanhoAlfabeto);
     forcaSenha.classList.remove(`fraca`,`media`,`forte`);
-    if (tamanhoSenha > 11){
+    if (entropia > 11){
         forcaSenha.classList.add(`forte`);
-    }else if(tamanhoSenha > 5 && tamanhoSenha < 12 ) {
+    }else if(entropia > 5 && entropia < 12 ) {
         forcaSenha.classList.add(`media`);
     }else if (tamanhoSenha <= 5){
         forcaSenha.classList.add(`fraca`);
     }
 }
+
 
