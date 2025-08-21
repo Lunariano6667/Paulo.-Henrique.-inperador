@@ -120,6 +120,7 @@ label{
 background-color: var(--fundo-senha);
 height: 30px;
 width: 100%;
+border: 1px solid var(--borda);
 }
 .forca{
     height: 30px;
@@ -130,7 +131,7 @@ width: 100%;
 width: 25%;
 background-color: #E71B32;
 }
-.media{
+.média{
     background-color: #FAF408;
     width: 50%;
 }
@@ -143,7 +144,6 @@ background-color: #E71B32;
     display: flex;
         justify-content: space-between;
 }
-
 
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha{
