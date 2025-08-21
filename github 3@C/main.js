@@ -93,3 +93,4 @@ const valorEntropia = documnt.querySelector(`.entropia`);
 
 
 
+
